@@ -16,14 +16,18 @@ import javax.persistence.Id;
  * @author admin
  */
 @Entity
-public class Genre implements Serializable {
+public class Serie implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String nom;
-    
+    private String titre;
+   private Integer duree;
+   private Integer anneeDebut;
+   private Integer anneeFin;
+           
+   private String synopsis;
 
     public Long getId() {
         return id;
@@ -43,10 +47,10 @@ public class Genre implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Genre)) {
+        if (!(object instanceof Serie)) {
             return false;
         }
-        Genre other = (Genre) object;
+        Serie other = (Serie) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -55,7 +59,7 @@ public class Genre implements Serializable {
 
     @Override
     public String toString() {
-        return "straming.entity.Genre[ id=" + id + " ]";
+        return "straming.entity.Serie[ id=" + id + " ]";
     }
     
 }

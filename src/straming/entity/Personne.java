@@ -42,9 +42,7 @@ public class Personne implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 private String prenom;
-@Enumerated(EnumType.STRING)
 private  String nom;
-@Enumerated(EnumType.STRING)
     public Long getId() {
         return id;
     }

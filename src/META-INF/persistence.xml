@@ -5,6 +5,7 @@
     <class>straming.entity.Film</class>
     <class>straming.entity.Lien</class>
     <class>straming.entity.Personne</class>
+    <class>straming.entity.Genre</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
       <property name="javax.persistence.jdbc.user" value="app"/>
